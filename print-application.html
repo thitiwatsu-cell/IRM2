@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Print Application | IRM Extra</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Kanit',sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+.sidebar{
+position:fixed;
+left:0;
+top:0;
+width:260px;
+height:100%;
+background:#1a1a1a;
+border-right:2px solid #ff7a00;
+padding:20px;
+}
+
+.logo{
+text-align:center;
+margin-bottom:30px;
+}
+
+.logo img{
+height:80px;
+margin-bottom:10px;
+}
+
+.logo h2{
+color:#ff7a00;
+}
+
+.menu a{
+display:block;
+padding:12px;
+margin-bottom:10px;
+text-decoration:none;
+background:#222;
+color:white;
+border-radius:10px;
+}
+
+.menu a:hover,
+.active{
+background:#ff7a00 !important;
+}
+
+.main{
+margin-left:260px;
+padding:30px;
+}
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.topbar h1{
+color:#ff7a00;
+}
+
+.print-btn{
+background:#4CAF50;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:10px;
+cursor:pointer;
+font-size:16px;
+}
+
+.application{
+background:white;
+color:black;
+padding:40px;
+border-radius:20px;
+max-width:1000px;
+margin:auto;
+}
+
+.application h1{
+text-align:center;
+margin-bottom:10px;
+color:#ff7a00;
+}
+
+.application h2{
+text-align:center;
+margin-bottom:30px;
+font-size:18px;
+font-weight:400;
+}
+
+.section{
+margin-bottom:20px;
+border:1px solid #ddd;
+padding:15px;
+border-radius:10px;
+}
+
+.section-title{
+background:#ff7a00;
+color:white;
+padding:8px;
+border-radius:6px;
+margin-bottom:10px;
+font-weight:bold;
+}
+
+.row{
+margin-bottom:6px;
+}
+
+.row strong{
+display:inline-block;
+width:260px;
+color:#333;
+}
+
+.photo{
+width:150px;
+height:180px;
+border:2px solid #ddd;
+border-radius:10px;
+overflow:hidden;
+margin:auto;
+}
+
+.photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.signature{
+margin-top:50px;
+display:flex;
+justify-content:space-between;
+}
+
+.signature div{
+text-align:center;
+width:300px;
+}
+
+@media print{
+.sidebar,.topbar{display:none;}
+body{background:white;}
+.main{margin-left:0;padding:0;}
+.application{box-shadow:none;border:none;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+<img src="IRM2.png">
+<h2>IRM Extra</h2>
+</div>
+
+<div class="menu">
+<a href="admin-dashboard.html">🏠 Dashboard</a>
+<a href="applicants.html">📄 ผู้สมัครงาน</a>
+<a href="approved.html">✅ ผู้ผ่านการคัดเลือก</a>
+<a href="rejected.html">❌ ผู้ไม่ผ่าน</a>
+<a href="send-email.html">📧 ส่งอีเมล</a>
+<a href="print-application.html" class="active">🖨 พิมพ์ใบสมัคร</a>
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="topbar">
+<h1>พิมพ์ใบสมัครงาน</h1>
+<button class="print-btn" onclick="window.print()">🖨 พิมพ์ใบสมัคร</button>
+</div>
+
+<div class="application">
+
+<h1>IRM EXTRA</h1>
+<h2>ใบสมัครงาน (Job Application Form)</h2>
+
+<!-- ข้อมูลพื้นฐาน (ของเดิม) -->
+<div class="section">
+<div class="section-title">ข้อมูลพื้นฐาน</div>
+
+<div class="row"><strong>ชื่อ - นามสกุล :</strong> สมชาย ใจดี</div>
+<div class="row"><strong>วัน/เดือน/ปีเกิด :</strong> 15/01/2000</div>
+<div class="row"><strong>อายุ :</strong> 26 ปี</div>
+<div class="row"><strong>น้ำหนัก / ส่วนสูง :</strong> 68 กก. / 172 ซม.</div>
+<div class="row"><strong>เชื้อชาติ :</strong> ไทย</div>
+<div class="row"><strong>สัญชาติ :</strong> ไทย</div>
+<div class="row"><strong>ศาสนา :</strong> พุทธ</div>
+</div>
+
+<!-- การศึกษา (เติมเฉพาะที่ยังไม่มี) -->
+<div class="section">
+<div class="section-title">การศึกษา</div>
+
+<div class="row"><strong>ระดับการศึกษา :</strong> ปริญญาตรี</div>
+<div class="row"><strong>สถาบันการศึกษา :</strong> มหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน</div>
+<div class="row"><strong>สาขาวิชา :</strong> ระบบสารสนเทศ</div>
+<div class="row"><strong>ปีที่จบการศึกษา :</strong> 2024</div>
+</div>
+
+<!-- ข้อมูลเอกสาร (เพิ่มใหม่) -->
+<div class="section">
+<div class="section-title">ข้อมูลเอกสาร</div>
+
+<div class="row"><strong>เลขบัตรประชาชน :</strong> 1-2345-67890-12-3</div>
+<div class="row"><strong>ออกให้โดย (อำเภอ) :</strong> เมืองนครราชสีมา</div>
+<div class="row"><strong>จังหวัด :</strong> นครราชสีมา</div>
+<div class="row"><strong>ที่อยู่ :</strong> 123 หมู่ 5 ตำบลในเมือง</div>
+<div class="row"><strong>ที่อยู่ตามทะเบียนบ้าน :</strong> 123 หมู่ 5 ตำบลในเมือง</div>
+<div class="row"><strong>ที่อยู่ปัจจุบัน :</strong> 123 หมู่ 5 ตำบลในเมือง</div>
+</div>
+
+<!-- ข้อมูลติดต่อ (เพิ่มเฉพาะหัวข้อใหม่) -->
+<div class="section">
+<div class="section-title">ข้อมูลติดต่อ</div>
+
+<div class="row"><strong>โทรศัพท์ :</strong> 091-234-5678</div>
+<div class="row"><strong>E-mail :</strong> somchai@gmail.com</div>
+</div>
+
+<!-- สถานภาพทางทหาร -->
+<div class="section">
+<div class="section-title">สถานภาพทางทหาร</div>
+
+<div class="row">✔ ได้รับการยกเว้น</div>
+<div class="row">○ จับได้ใบดำ</div>
+<div class="row">○ ผ่านนักศึกษาวิชาทหาร</div>
+<div class="row">○ อื่นๆ</div>
+</div>
+
+<!-- ครอบครัว -->
+<div class="section">
+<div class="section-title">ข้อมูลครอบครัว</div>
+
+<div class="row"><strong>บิดา :</strong> นายxxx xxx</div>
+<div class="row"><strong>มารดา :</strong> นางxxx xxx</div>
+<div class="row"><strong>อาชีพ :</strong> เกษตรกร</div>
+<div class="row"><strong>เบอร์โทร :</strong> 08x-xxx-xxxx</div>
+
+<div class="row">สถานภาพสมรส : โสด</div>
+</div>
+
+<!-- บุคคลติดต่อฉุกเฉิน -->
+<div class="section">
+<div class="section-title">บุคคลติดต่อฉุกเฉิน</div>
+
+<div class="row"><strong>ชื่อ / ที่อยู่ / ที่ทำงาน :</strong> นายxxx xxx</div>
+<div class="row"><strong>เบอร์โทร :</strong> 08x-xxx-xxxx</div>
+</div>
+
+<!-- เงินเดือน -->
+<div class="section">
+<div class="section-title">เงินเดือนที่ต้องการ</div>
+
+<div class="row"><strong>ระบุเงินเดือน :</strong> 18,000 บาท/เดือน</div>
+</div>
+
+<!-- รูป -->
+<div class="section">
+<div class="section-title">รูปถ่าย</div>
+<div class="photo">
+<img src="candidate.jpg">
+</div>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

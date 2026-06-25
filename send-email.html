@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Send Email | IRM Extra</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Kanit',sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+.sidebar{
+position:fixed;
+left:0;
+top:0;
+width:260px;
+height:100%;
+background:#1a1a1a;
+border-right:2px solid #ff7a00;
+padding:20px;
+}
+
+.logo{
+text-align:center;
+margin-bottom:30px;
+}
+
+.logo img{
+height:80px;
+margin-bottom:10px;
+}
+
+.logo h2{
+color:#ff7a00;
+}
+
+.menu a{
+display:block;
+padding:12px;
+margin-bottom:10px;
+text-decoration:none;
+background:#222;
+color:white;
+border-radius:10px;
+transition:.3s;
+}
+
+.menu a:hover,
+.active{
+background:#ff7a00 !important;
+}
+
+.main{
+margin-left:260px;
+padding:30px;
+}
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.topbar h1{
+color:#ff7a00;
+}
+
+.back-btn{
+background:#2196f3;
+padding:10px 20px;
+border-radius:20px;
+text-decoration:none;
+color:white;
+}
+
+.form-box{
+background:#1a1a1a;
+padding:30px;
+border-radius:20px;
+border:1px solid #333;
+max-width:900px;
+}
+
+.form-group{
+margin-bottom:20px;
+}
+
+label{
+display:block;
+margin-bottom:8px;
+font-weight:500;
+}
+
+input,
+select,
+textarea{
+width:100%;
+padding:12px;
+background:#222;
+border:1px solid #333;
+border-radius:10px;
+color:white;
+font-size:15px;
+}
+
+textarea{
+height:220px;
+resize:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+outline:none;
+border-color:#ff7a00;
+}
+
+.send-btn{
+background:#ff7a00;
+color:white;
+border:none;
+padding:14px 25px;
+border-radius:10px;
+cursor:pointer;
+font-size:16px;
+font-weight:600;
+}
+
+.send-btn:hover{
+background:#e56c00;
+}
+
+.preview{
+margin-top:30px;
+background:#181818;
+padding:25px;
+border-radius:15px;
+border-left:5px solid #ff7a00;
+}
+
+.preview h3{
+color:#ff7a00;
+margin-bottom:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+<img src="IRM2.png">
+<h2>IRM Extra</h2>
+</div>
+
+<div class="menu">
+<a href="admin-dashboard.html">🏠 Dashboard</a>
+<a href="applicants.html">📄 ผู้สมัครงาน</a>
+<a href="approved.html">✅ ผู้ผ่านการคัดเลือก</a>
+<a href="rejected.html">❌ ผู้ไม่ผ่าน</a>
+<a href="send-email.html" class="active">📧 ส่งอีเมล</a>
+<a href="print-application.html">🖨 พิมพ์ใบสมัคร</a>
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="topbar">
+
+<h1>ส่งอีเมลแจ้งผลสมัครงาน</h1>
+
+<a href="rejected.html" class="back-btn">
+← กลับ
+</a>
+
+</div>
+
+<div class="form-box">
+
+<div class="form-group">
+<label>เลือกผู้สมัคร</label>
+<select>
+<option>สมชาย ใจดี</option>
+<option>สุดา รัตนา</option>
+<option>กิตติพงษ์ ดีมาก</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>อีเมลผู้สมัคร</label>
+<input type="email" value="candidate@email.com">
+</div>
+
+<div class="form-group">
+<label>ประเภทอีเมล</label>
+<select>
+<option>แจ้งผ่านการคัดเลือก</option>
+<option>แจ้งไม่ผ่านการคัดเลือก</option>
+<option>เรียกสัมภาษณ์เพิ่มเติม</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>หัวข้ออีเมล</label>
+<input type="text" value="แจ้งผลการสมัครงาน บริษัท IRM Extra">
+</div>
+
+<div class="form-group">
+<label>ข้อความ</label>
+
+<textarea>
+เรียน ผู้สมัคร
+
+บริษัท IRM Extra ขอขอบคุณที่ท่านให้ความสนใจร่วมงานกับบริษัท
+
+ทางบริษัทได้พิจารณาข้อมูลของท่านเรียบร้อยแล้ว
+
+กรุณาติดต่อกลับเพื่อดำเนินการในขั้นตอนถัดไป
+
+ขอแสดงความนับถือ
+
+ฝ่ายทรัพยากรบุคคล
+IRM Extra Property Management
+</textarea>
+
+</div>
+
+<button class="send-btn">
+📧 ส่งอีเมล
+</button>
+
+<div class="preview">
+
+<h3>ตัวอย่างอีเมล</h3>
+
+<p>
+ระบบนี้ใช้สำหรับส่งผลการสมัครงาน
+แจ้งผ่านการคัดเลือก
+แจ้งไม่ผ่านการคัดเลือก
+และเรียกสัมภาษณ์เพิ่มเติม
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

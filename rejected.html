@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ผู้ไม่ผ่านการคัดเลือก | IRM Extra</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Kanit',sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+.sidebar{
+position:fixed;
+left:0;
+top:0;
+width:260px;
+height:100%;
+background:#1a1a1a;
+border-right:2px solid #ff7a00;
+padding:20px;
+}
+
+.logo{
+text-align:center;
+margin-bottom:30px;
+}
+
+.logo img{
+height:80px;
+margin-bottom:10px;
+}
+
+.logo h2{
+color:#ff7a00;
+}
+
+.menu a{
+display:block;
+padding:12px;
+margin-bottom:10px;
+text-decoration:none;
+background:#222;
+color:white;
+border-radius:10px;
+transition:.3s;
+}
+
+.menu a:hover{
+background:#ff7a00;
+}
+
+.main{
+margin-left:260px;
+padding:30px;
+}
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.topbar h1{
+color:#ff7a00;
+}
+
+.back-btn{
+background:#ff7a00;
+color:white;
+text-decoration:none;
+padding:10px 20px;
+border-radius:20px;
+}
+
+.table-box{
+background:#1a1a1a;
+padding:20px;
+border-radius:20px;
+overflow:auto;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#ff7a00;
+padding:12px;
+}
+
+td{
+padding:12px;
+border-bottom:1px solid #333;
+text-align:center;
+}
+
+.status{
+background:#e53935;
+padding:6px 12px;
+border-radius:20px;
+display:inline-block;
+}
+
+.btn{
+padding:8px 15px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+color:white;
+}
+
+.view{
+background:#2196f3;
+}
+
+.email{
+background:#9c27b0;
+}
+
+.delete{
+background:#e53935;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+<img src="IRM2.png" alt="">
+<h2>IRM Extra</h2>
+</div>
+
+<div class="menu">
+<a href="admin-dashboard.html">🏠 Dashboard</a>
+<a href="applicants.html">📄 ผู้สมัครงาน</a>
+<a href="approved.html">✅ ผู้ผ่านการคัดเลือก</a>
+<a href="rejected.html">❌ ผู้ไม่ผ่านการคัดเลือก</a>
+<a href="send-email.html">📧 ส่งอีเมล</a>
+<a href="print-application.html">🖨 พิมพ์ใบสมัคร</a>
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="topbar">
+
+<h1>❌ ผู้ไม่ผ่านการคัดเลือก</h1>
+
+<a href="admin-dashboard.html" class="back-btn">
+กลับ Dashboard
+</a>
+
+</div>
+
+<div class="table-box">
+
+<h2 style="color:#ff7a00;margin-bottom:20px;">
+รายชื่อผู้สมัครที่ไม่ผ่านการคัดเลือก
+</h2>
+
+<table>
+
+<tr>
+<th>ชื่อ-นามสกุล</th>
+<th>ตำแหน่ง</th>
+<th>วันที่สมัคร</th>
+<th>สถานะ</th>
+<th>จัดการ</th>
+</tr>
+
+<tr>
+<td>สมชาย ใจดี</td>
+<td>เจ้าหน้าที่ธุรการ</td>
+<td>01/06/2026</td>
+<td>
+<span class="status">ไม่ผ่าน</span>
+</td>
+<td>
+
+<button class="btn view"
+onclick="location.href='applicant-detail.html'">
+ดูข้อมูล
+</button>
+
+<button class="btn email"
+onclick="location.href='send-email.html'">
+ส่งอีเมล
+</button>
+
+<button class="btn delete">
+ลบ
+</button>
+
+</td>
+</tr>
+
+<tr>
+<td>นางสาวกมลชนก ดีมาก</td>
+<td>เจ้าหน้าที่บัญชี</td>
+<td>03/06/2026</td>
+<td>
+<span class="status">ไม่ผ่าน</span>
+</td>
+<td>
+
+<button class="btn view"
+onclick="location.href='applicant-detail.html'">
+ดูข้อมูล
+</button>
+
+<button class="btn email"
+onclick="location.href='send-email.html'">
+ส่งอีเมล
+</button>
+
+<button class="btn delete">
+ลบ
+</button>
+
+</td>
+</tr>
+
+<tr>
+<td>ธีรภัทร มั่นคง</td>
+<td>ช่างเทคนิค</td>
+<td>05/06/2026</td>
+<td>
+<span class="status">ไม่ผ่าน</span>
+</td>
+<td>
+
+<button class="btn view"
+onclick="location.href='applicant-detail.html'">
+ดูข้อมูล
+</button>
+
+<button class="btn email"
+onclick="location.href='send-email.html'">
+ส่งอีเมล
+</button>
+
+<button class="btn delete">
+ลบ
+</button>
+
+</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Applicant Detail | IRM Extra</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Kanit',sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+.sidebar{
+position:fixed;
+left:0;
+top:0;
+width:260px;
+height:100%;
+background:#1a1a1a;
+border-right:2px solid #ff7a00;
+padding:20px;
+}
+
+.logo{
+text-align:center;
+margin-bottom:30px;
+}
+
+.logo img{
+height:80px;
+margin-bottom:10px;
+}
+
+.logo h2{
+color:#ff7a00;
+}
+
+.menu a{
+display:block;
+padding:12px;
+margin-bottom:10px;
+text-decoration:none;
+background:#222;
+color:white;
+border-radius:10px;
+transition:.3s;
+}
+
+.menu a:hover{
+background:#ff7a00;
+}
+
+.main{
+margin-left:260px;
+padding:30px;
+}
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.topbar h1{
+color:#ff7a00;
+}
+
+.back-btn{
+background:#ff7a00;
+color:white;
+padding:10px 20px;
+border-radius:10px;
+text-decoration:none;
+}
+
+.profile-box{
+background:#1a1a1a;
+padding:25px;
+border-radius:20px;
+margin-bottom:25px;
+border:1px solid #333;
+display:flex;
+gap:30px;
+align-items:center;
+}
+
+.profile-photo{
+width:180px;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+border:3px solid #ff7a00;
+}
+
+.profile-info h2{
+color:#ff7a00;
+margin-bottom:10px;
+}
+
+.profile-info p{
+margin-bottom:8px;
+color:#ddd;
+}
+
+.detail-card{
+background:#1a1a1a;
+padding:25px;
+border-radius:20px;
+margin-bottom:25px;
+border:1px solid #333;
+}
+
+.detail-card h2{
+color:#ff7a00;
+margin-bottom:20px;
+}
+
+.info-table{
+width:100%;
+border-collapse:collapse;
+}
+
+.info-table td{
+padding:12px;
+border-bottom:1px solid #333;
+}
+
+.info-table td:first-child{
+font-weight:600;
+width:250px;
+color:#ff7a00;
+}
+
+.document-table{
+width:100%;
+border-collapse:collapse;
+}
+
+.document-table th{
+background:#ff7a00;
+padding:12px;
+}
+
+.document-table td{
+padding:12px;
+border-bottom:1px solid #333;
+text-align:center;
+}
+
+.doc-btn{
+padding:8px 15px;
+border-radius:8px;
+text-decoration:none;
+color:white;
+display:inline-block;
+}
+
+.view{
+background:#2196f3;
+}
+
+.download{
+background:#4caf50;
+}
+
+.action-box{
+display:flex;
+gap:15px;
+justify-content:center;
+margin-top:30px;
+flex-wrap:wrap;
+}
+
+.action-btn{
+padding:14px 25px;
+border:none;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+color:white;
+}
+
+.approve{
+background:#4caf50;
+}
+
+.reject{
+background:#e53935;
+}
+
+.email{
+background:#2196f3;
+}
+
+.print{
+background:#ff7a00;
+}
+
+@media(max-width:768px){
+
+.sidebar{
+display:none;
+}
+
+.main{
+margin-left:0;
+padding:15px;
+}
+
+.profile-box{
+flex-direction:column;
+text-align:center;
+}
+
+.profile-photo{
+width:150px;
+height:180px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+<img src="IRM2.png">
+<h2>IRM Extra</h2>
+</div>
+
+<div class="menu">
+<a href="admin-dashboard.html">🏠 Dashboard</a>
+<a href="applicants.html">📄 ผู้สมัครงาน</a>
+<a href="approved.html">✅ ผู้ผ่านการคัดเลือก</a>
+<a href="rejected.html">❌ ผู้ไม่ผ่าน</a>
+<a href="send-email.html">📧 ส่งอีเมล</a>
+<a href="print-application.html">🖨 พิมพ์ใบสมัคร</a>
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="topbar">
+
+<h1>รายละเอียดผู้สมัคร</h1>
+
+<a href="applicants.html" class="back-btn">
+← กลับ
+</a>
+
+</div>
+
+<div class="profile-box">
+
+<img src="candidate.jpg" class="profile-photo">
+
+<div class="profile-info">
+
+<h2>สมชาย ใจดี</h2>
+
+<p>ตำแหน่ง : เจ้าหน้าที่ธุรการ</p>
+
+<p>อีเมล : somchai@gmail.com</p>
+
+<p>เบอร์โทร : 0891234567</p>
+
+<p>สถานะ : รอพิจารณา</p>
+
+</div>
+
+</div>
+
+<div class="detail-card">
+
+<h2>ข้อมูลส่วนตัว</h2>
+
+<table class="info-table">
+
+<tr>
+<td>ชื่อ-นามสกุล</td>
+<td>สมชาย ใจดี</td>
+</tr>
+
+<tr>
+<td>วันเกิด</td>
+<td>01 มกราคม 2543</td>
+</tr>
+
+<tr>
+<td>อายุ</td>
+<td>26 ปี</td>
+</tr>
+
+<tr>
+<td>ที่อยู่</td>
+<td>123 หมู่ 5 ตำบลในเมือง อำเภอเมือง จังหวัดนครราชสีมา</td>
+</tr>
+
+<tr>
+<td>เบอร์โทรศัพท์</td>
+<td>0891234567</td>
+</tr>
+
+<tr>
+<td>อีเมล</td>
+<td>somchai@gmail.com</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="detail-card">
+
+<h2>ประวัติการศึกษา</h2>
+
+<table class="info-table">
+
+<tr>
+<td>ระดับการศึกษา</td>
+<td>ปริญญาตรี</td>
+</tr>
+
+<tr>
+<td>สถาบัน</td>
+<td>มหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน</td>
+</tr>
+
+<tr>
+<td>คณะ</td>
+<td>บริหารธุรกิจ</td>
+</tr>
+
+<tr>
+<td>สาขา</td>
+<td>ระบบสารสนเทศ</td>
+</tr>
+
+<tr>
+<td>เกรดเฉลี่ย</td>
+<td>3.25</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="detail-card">
+
+<h2>ประสบการณ์การทำงาน</h2>
+
+<table class="info-table">
+
+<tr>
+<td>บริษัทล่าสุด</td>
+<td>ABC จำกัด</td>
+</tr>
+
+<tr>
+<td>ตำแหน่ง</td>
+<td>เจ้าหน้าที่ธุรการ</td>
+</tr>
+
+<tr>
+<td>ระยะเวลา</td>
+<td>2 ปี</td>
+</tr>
+
+<tr>
+<td>เงินเดือนล่าสุด</td>
+<td>18,000 บาท</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="detail-card">
+
+<h2>📁 เอกสารประกอบการสมัคร</h2>
+
+<table class="document-table">
+
+<tr>
+<th>เอกสาร</th>
+<th>สถานะ</th>
+<th>เปิดดู</th>
+</tr>
+
+<tr>
+<td>ใบสมัครงาน</td>
+<td>อัปโหลดแล้ว</td>
+<td><a href="#" class="doc-btn view">เปิดดู</a></td>
+</tr>
+
+<tr>
+<td>Resume / CV</td>
+<td>อัปโหลดแล้ว</td>
+<td><a href="#" class="doc-btn view">เปิดดู</a></td>
+</tr>
+
+<tr>
+<td>สำเนาบัตรประชาชน</td>
+<td>อัปโหลดแล้ว</td>
+<td><a href="#" class="doc-btn view">เปิดดู</a></td>
+</tr>
+
+<tr>
+<td>สำเนาทะเบียนบ้าน</td>
+<td>อัปโหลดแล้ว</td>
+<td><a href="#" class="doc-btn view">เปิดดู</a></td>
+</tr>
+
+<tr>
+<td>สำเนาวุฒิการศึกษา</td>
+<td>อัปโหลดแล้ว</td>
+<td><a href="#" class="doc-btn view">เปิดดู</a></td>
+</tr>
+
+<tr>
+<td>Transcript</td>
+<td>อัปโหลดแล้ว</td>
+<td><a href="#" class="doc-btn view">เปิดดู</a></td>
+</tr>
+
+<tr>
+<td>รูปถ่าย 1-2 นิ้ว</td>
+<td>อัปโหลดแล้ว</td>
+<td><a href="#" class="doc-btn view">เปิดดู</a></td>
+</tr>
+
+<tr>
+<td>ใบผ่านการเกณฑ์ทหาร</td>
+<td>อัปโหลดแล้ว</td>
+<td><a href="#" class="doc-btn view">เปิดดู</a></td>
+</tr>
+
+<tr>
+<td>ใบรับรองการทำงานเดิม</td>
+<td>อัปโหลดแล้ว</td>
+<td><a href="#" class="doc-btn view">เปิดดู</a></td>
+</tr>
+
+<tr>
+<td>ใบประกาศนียบัตร/อบรม</td>
+<td>อัปโหลดแล้ว</td>
+<td><a href="#" class="doc-btn view">เปิดดู</a></td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="action-box">
+
+<button class="action-btn approve"
+onclick="location.href='approved.html'">
+✅ อนุมัติผู้สมัคร
+</button>
+
+<button class="action-btn reject"
+onclick="location.href='rejected.html'">
+❌ ไม่อนุมัติ
+</button>
+
+<button class="action-btn email"
+onclick="location.href='send-email.html'">
+📧 ส่งอีเมล
+</button>
+
+<button class="action-btn print"
+onclick="location.href='print-application.html'">
+🖨 พิมพ์ใบสมัคร
+</button>
+
+</div>
+
+</div>
+
+</body>
+</html>
